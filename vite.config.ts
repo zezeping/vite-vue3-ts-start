@@ -23,7 +23,7 @@ export default defineConfig((params) => {
       disableHostCheck: true, // 解决127.0.0.1指向其他域名时出现"Invalid Host header"问题
       // https://vitejs.dev/config/#server-proxy
       proxy: {
-        '^\/(gateway)': {
+        '^/(gateway)': {
           target: 'https://xxx.com', // alpha
           // headers: { host: 'xxx.com' },
           changOrigin: true, // 配置跨域
