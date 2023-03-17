@@ -1,14 +1,13 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import { defineConfig, loadEnv } from 'vite'
+import { defineConfig, loadEnv, type UserConfigFn, type ConfigEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 // polyfill https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
 // import legacy from '@vitejs/plugin-legacy'
 
-// https://vitejs.dev/config/
-export default defineConfig((params) => {
-  const { command, mode } = params
+export const generateViteConfig: UserConfigFn = (env: ConfigEnv) => {
+  const { command, mode } = env
   const ENV = loadEnv(mode, process.cwd())
   console.info(`running mode: ${mode}, command: ${command}, ENV: ${JSON.stringify(ENV)}`)
 
@@ -83,4 +82,7 @@ export default defineConfig((params) => {
       // })
     ],
   }
-})
+}
+
+// https://vitejs.dev/config/
+export default defineConfig(generateViteConfig)
