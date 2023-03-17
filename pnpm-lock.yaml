@@ -21,6 +21,7 @@ specifiers:
   npm-run-all: ^4.1.5
   nprogress: ^0.2.0
   pinia: ^2.0.32
+  pinia-plugin-persistedstate: ^3.1.0
   postcss: ^8.4.21
   prettier: ^2.8.4
   sass: ^1.59.3
@@ -36,6 +37,7 @@ dependencies:
   lodash-es: 4.17.21
   nprogress: 0.2.0
   pinia: 2.0.33_p4srtwdgezcoeovfcc2yxzvaue
+  pinia-plugin-persistedstate: 3.1.0_pinia@2.0.33
   vue: 3.2.47
   vue-router: 4.1.6_vue@3.2.47
 
@@ -3085,6 +3087,14 @@ packages:
     resolution: {integrity: sha512-C3FsVNH1udSEX48gGX1xfvwTWfsYWj5U+8/uK15BGzIGrKoUpghX8hWZwa/OFnakBiiVNmBvemTJR5mcy7iPcg==}
     engines: {node: '>=4'}
     dev: true
+
+  /pinia-plugin-persistedstate/3.1.0_pinia@2.0.33:
+    resolution: {integrity: sha512-8UN+vYMEPBdgNLwceY08mi5olI0wkYaEb8b6hD6xW7SnBRuPydWHlEhZvUWgNb/ibuf4PvufpvtS+dmhYjJQOw==}
+    peerDependencies:
+      pinia: ^2.0.0
+    dependencies:
+      pinia: 2.0.33_p4srtwdgezcoeovfcc2yxzvaue
+    dev: false
 
   /pinia/2.0.33_p4srtwdgezcoeovfcc2yxzvaue:
     resolution: {integrity: sha512-HOj1yVV2itw6rNIrR2f7+MirGNxhORjrULL8GWgRwXsGSvEqIQ+SE0MYt6cwtpegzCda3i+rVTZM+AM7CG+kRg==}
